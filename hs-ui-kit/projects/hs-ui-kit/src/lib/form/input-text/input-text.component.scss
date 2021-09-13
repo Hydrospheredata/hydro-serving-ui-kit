@@ -1,0 +1,23 @@
+.hs-input {
+  &__input {
+    @apply border border-gray-300 border-solid rounded text-gray-600 text-base w-full h-8 py-0.5 px-2;
+    &--with-icon {
+      @apply pl-8;
+    }
+  }
+
+  &__errors {
+    @apply flex items-center bg-red-500 text-gray-100 absolute text-sm p-1 w-full rounded;
+    top: calc(100% + 4px);
+  }
+
+  &__error {
+    @apply relative pl-2.5 mr-2 top-1/2 left-1;
+    &::before {
+      @apply absolute w-2 h-2 bg-white;
+      content: '';
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

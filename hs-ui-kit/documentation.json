@@ -1,0 +1,1382 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-28f1d4deb5d8dc55364dbb37ceb6c68a",
+            "file": "stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "hs-button",
+            "styleUrls": [
+                "./button.scss"
+            ],
+            "styles": [],
+            "template": "<button   hs-button\n   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [disabled]=\"disabled\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "\"base\" | \"primary\" | \"accent\" | \"warning\" | \"cyan\" | undefined"
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "boolean"
+                },
+                {
+                    "name": "kind",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "\"base\" | \"flat\" | \"stroked\" | undefined"
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'hs-button',\n  template: ` <button\n    hs-button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [disabled]=\"disabled\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.scss'],\n})\nexport default class ButtonComponent {\n  @Input()\n  kind: 'base' | 'flat' | 'stroked' | undefined;\n\n  @Input()\n  disabled = false;\n\n  @Input()\n  color: 'base' | 'primary' | 'accent' | 'warning' | 'cyan' | undefined;\n\n  @Input()\n  label = 'Button';\n\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    return [\n      'hs-button',\n      `hs-button--${this.kind}`,\n      `hs-button--${this.kind}-${this.color}`,\n    ];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".hs-button {\n  @apply bg-transparent border-none rounded text-sm font-medium py-1.5 px-3.5 capitalize transition-colors cursor-pointer;\n\n  &__icon {\n    @apply w-3.5 h-3.5;\n  }\n}\n\n.hs-button--base {\n  @apply text-gray-900;\n\n  &:not([disabled]):hover {\n    @apply bg-gray-100;\n  }\n\n  &-primary {\n    @apply text-blue-700;\n\n    &:not([disabled]):hover {\n      @apply bg-blue-100;\n    }\n  }\n\n  &-accent {\n    @apply text-yellow-500;\n\n    &:not([disabled]):hover {\n      @apply bg-yellow-100;\n    }\n  }\n\n  &-warning {\n    @apply text-red-700;\n\n    &:not([disabled]):hover {\n      @apply bg-red-100;\n    }\n  }\n\n  &-cyan {\n    @apply text-green-600;\n\n    &:not([disabled]):hover {\n      @apply bg-green-100;\n    }\n  }\n\n  &[disabled] {\n    @apply text-gray-200;\n  }\n}\n\n.hs-button--stroked {\n  @apply text-gray-900 border border-solid border-gray-200 py-1 px-3;\n\n  &:not([disabled]):hover {\n    @apply bg-gray-100;\n  }\n\n  &-primary {\n    @apply text-blue-700;\n\n    &:not([disabled]):hover {\n      @apply bg-blue-100;\n    }\n  }\n\n  &-accent {\n    @apply text-yellow-500;\n\n    &:not([disabled]):hover {\n      @apply bg-yellow-100;\n    }\n  }\n\n  &-warning {\n    @apply text-red-700;\n\n    &:not([disabled]):hover {\n      @apply bg-red-100;\n    }\n  }\n\n  &-cyan {\n    @apply text-green-600;\n\n    &:not([disabled]):hover {\n      @apply bg-green-100;\n    }\n  }\n\n  &[disabled] {\n    @apply text-gray-200 border-gray-100;\n  }\n}\n\n.hs-button--flat {\n  @apply text-gray-900 bg-white;\n\n  &-primary {\n    @apply bg-blue-700 text-gray-100;\n  }\n\n  &-accent {\n    @apply bg-yellow-500 text-gray-100;\n  }\n\n  &-warning {\n    @apply bg-red-700 text-gray-100;\n  }\n\n  &-cyan {\n    @apply bg-green-600 text-gray-100;\n  }\n\n  &[disabled] {\n    @apply bg-gray-100 text-gray-200;\n  }\n}\n",
+                    "styleUrl": "./button.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 32
+                    }
+                }
+            }
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-760431e4c8eca9053a09e8c01a120948-1",
+            "file": "projects/hs-ui-kit/src/lib/button/button.component.ts",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "hs-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'base'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "buttonColors"
+                },
+                {
+                    "name": "kind",
+                    "defaultValue": "'base'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "buttonKinds"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  Component,\n  Input,\n  ViewEncapsulation,\n} from '@angular/core';\n\ntype buttonKinds = 'base' | 'flat' | 'stroked';\ntype buttonColors = 'base' | 'primary' | 'accent' | 'warning' | 'cyan';\n\n@Component({\n  selector: 'hs-button',\n  templateUrl: 'button.component.html',\n  styleUrls: ['./button.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class ButtonComponent {\n  @Input() kind: buttonKinds = 'base';\n  @Input() color: buttonColors = 'base';\n\n  get kindClass(): string {\n    return `hs-button--${this.kind}`;\n  }\n\n  get kindAndColorClass(): string {\n    return `hs-button--${this.kind}-${this.color}`;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".hs-button {\n  @apply bg-transparent border-none rounded text-sm font-medium py-1.5 px-3.5 capitalize transition-colors cursor-pointer disabled:cursor-default;\n\n  &__icon {\n    @apply w-3.5 h-3.5;\n  }\n}\n\n.hs-button--base {\n  @apply text-gray-900;\n\n  &:not([disabled]):hover {\n    @apply bg-gray-100;\n  }\n\n  &-primary {\n    @apply text-blue-700;\n\n    &:not([disabled]):hover {\n      @apply bg-blue-100;\n    }\n  }\n\n  &-accent {\n    @apply text-yellow-500;\n\n    &:not([disabled]):hover {\n      @apply bg-yellow-100;\n    }\n  }\n\n  &-warning {\n    @apply text-red-700;\n\n    &:not([disabled]):hover {\n      @apply bg-red-100;\n    }\n  }\n\n  &-cyan {\n    @apply text-green-600;\n\n    &:not([disabled]):hover {\n      @apply bg-green-100;\n    }\n  }\n\n  &[disabled] {\n    @apply text-gray-200;\n  }\n}\n\n.hs-button--stroked {\n  @apply text-gray-900 border border-solid border-gray-200 py-1 px-3;\n\n  &:not([disabled]):hover {\n    @apply bg-gray-100;\n  }\n\n  &-primary {\n    @apply text-blue-700;\n\n    &:not([disabled]):hover {\n      @apply bg-blue-100;\n    }\n  }\n\n  &-accent {\n    @apply text-yellow-500;\n\n    &:not([disabled]):hover {\n      @apply bg-yellow-100;\n    }\n  }\n\n  &-warning {\n    @apply text-red-700;\n\n    &:not([disabled]):hover {\n      @apply bg-red-100;\n    }\n  }\n\n  &-cyan {\n    @apply text-green-600;\n\n    &:not([disabled]):hover {\n      @apply bg-green-100;\n    }\n  }\n\n  &[disabled] {\n    @apply text-gray-200 border-gray-100;\n  }\n}\n\n.hs-button--flat {\n  @apply text-gray-900 bg-white;\n\n  &-primary {\n    @apply bg-blue-700 text-gray-100;\n  }\n\n  &-accent {\n    @apply bg-yellow-500 text-gray-100;\n  }\n\n  &-warning {\n    @apply bg-red-700 text-gray-100;\n  }\n\n  &-cyan {\n    @apply bg-green-600 text-gray-100;\n  }\n\n  &[disabled] {\n    @apply bg-gray-100 text-gray-200;\n  }\n}\n",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "kindClass": {
+                    "name": "kindClass",
+                    "getSignature": {
+                        "name": "kindClass",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 20
+                    }
+                },
+                "kindAndColorClass": {
+                    "name": "kindAndColorClass",
+                    "getSignature": {
+                        "name": "kindAndColorClass",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 24
+                    }
+                }
+            },
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "ButtonComponent-1",
+            "templateData": "<span class=\"hs-button\" [ngClass]=\"[kindClass, kindAndColorClass]\"><ng-content></ng-content></span>\n"
+        },
+        {
+            "name": "IconComponent",
+            "id": "component-IconComponent-1596ac6bab65578e85cdb002c07da3a5",
+            "file": "projects/hs-ui-kit/src/lib/icon/icon.component.ts",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "hydro-icon",
+            "styleUrls": [
+                "./icon.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./icon.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string"
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'hydro-icon',\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class IconComponent {\n  @Input() type: string = '';\n  @Input() title: string = '';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./icon.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<svg class=\"hydro-icon\">\n  <title *ngIf=\"title\">{{ title }}</title>\n  <use attr.xlink:href=\"{{ '#' + type }}\" />\n</svg>\n"
+        },
+        {
+            "name": "InputTextComponent",
+            "id": "component-InputTextComponent-551cb13e887f8fbb6b0f4334c7a68d64",
+            "file": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputTextComponent), multi: true,\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "hs-input-text",
+            "styleUrls": [
+                "./input-text.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-text.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 40,
+                    "type": "boolean"
+                },
+                {
+                    "name": "errors",
+                    "defaultValue": "{}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 39,
+                    "type": "literal type | null"
+                },
+                {
+                    "name": "icon",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 38,
+                    "type": "string"
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 37,
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
+                    "type": "string"
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 41,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "_value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 43,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "onChange",
+                    "defaultValue": "noop",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "function",
+                    "optional": false,
+                    "description": "",
+                    "line": 44,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "onTouched",
+                    "defaultValue": "noop",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "function",
+                    "optional": false,
+                    "description": "",
+                    "line": 45,
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "hasErrors",
+                    "args": [
+                        {
+                            "name": "input",
+                            "type": "NgModel",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 69,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "input",
+                            "type": "NgModel",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": [
+                                {
+                                    "name": "_",
+                                    "type": "any",
+                                    "deprecated": false,
+                                    "deprecationMessage": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 61,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": [
+                                {
+                                    "name": "_",
+                                    "type": "any",
+                                    "deprecated": false,
+                                    "deprecationMessage": ""
+                                }
+                            ],
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": []
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 65,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": [],
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 55,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, forwardRef } from '@angular/core';\nimport {\n  ControlValueAccessor,\n  NG_VALUE_ACCESSOR,\n  NgModel,\n} from '@angular/forms';\n\nconst noop = (_?: any) => {};\n\n@Component({\n  selector: 'hs-input-text',\n  templateUrl: './input-text.component.html',\n  styleUrls: ['./input-text.component.scss'],\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      // eslint-disable-next-line @angular-eslint/no-forward-ref\n      useExisting: forwardRef(() => InputTextComponent),\n      multi: true,\n    },\n  ],\n})\nexport class InputTextComponent implements ControlValueAccessor {\n  get value(): any {\n    return this._value;\n  }\n\n  set value(value: any) {\n    if (value !== this._value) {\n      this._value = value;\n      this.onChange(value);\n    }\n  }\n\n  @Input() public name: string = '';\n  @Input() public label: string = '';\n  @Input() public icon: string = '';\n  @Input() public errors: { [err: string]: string } | null = {};\n  @Input() public disabled: boolean = false;\n  @Input() public placeholder: string = '';\n\n  protected _value: any;\n  protected onChange: (_: any) => void = noop;\n  protected onTouched: () => void = noop;\n\n  get inputClassMap(): { [p: string]: boolean } {\n    const rootClass = 'hs-input__input';\n    return {\n      [rootClass]: true,\n      [`${rootClass}--with-icon`]: this.icon !== undefined,\n    };\n  }\n\n  public writeValue(value: any) {\n    if (value !== this._value) {\n      this._value = value;\n    }\n  }\n\n  public registerOnChange(fn: (_: any) => void) {\n    this.onChange = fn;\n  }\n\n  public registerOnTouched(fn: () => void) {\n    this.onTouched = fn;\n  }\n\n  public hasErrors(input: NgModel): boolean {\n    return <boolean>input.touched && this.errors != null;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".hs-input {\n  &__input {\n    @apply border border-gray-300 border-solid rounded text-gray-600 text-base w-full h-8 py-0.5 px-2;\n    &--with-icon {\n      @apply pl-8;\n    }\n  }\n\n  &__errors {\n    @apply flex items-center bg-red-500 text-gray-100 absolute text-sm p-1 w-full rounded;\n    top: calc(100% + 4px);\n  }\n\n  &__error {\n    @apply relative pl-2.5 mr-2 top-1/2 left-1;\n    &::before {\n      @apply absolute w-2 h-2 bg-white;\n      content: '';\n      border-radius: 50%;\n      transform: translate(-50%, -50%);\n    }\n  }\n}\n",
+                    "styleUrl": "./input-text.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "ControlValueAccessor"
+            ],
+            "accessors": {
+                "value": {
+                    "name": "value",
+                    "setSignature": {
+                        "name": "value",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 29,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "value",
+                        "type": "any",
+                        "returnType": "any",
+                        "line": 25
+                    }
+                },
+                "inputClassMap": {
+                    "name": "inputClassMap",
+                    "getSignature": {
+                        "name": "inputClassMap",
+                        "type": "literal type",
+                        "returnType": "literal type",
+                        "line": 47
+                    }
+                }
+            },
+            "templateData": "<div class=\"hs-input\">\n  <label *ngIf=\"label\" class=\"text-gray-900 uppercase text-xs\t\" [attr.for]=\"name\">{{ label }}</label>\n  <div class=\"relative\">\n    <hs-icon *ngIf=\"icon\" class=\"absolute top-0.5\tleft-1 w-7 h-7 text-gray-300\" [type]=\"icon\"></hs-icon>\n    <input [ngClass]=\"inputClassMap\" [(ngModel)]=\"value\" [attr.id]=\"name\" />\n    <ng-container *ngIf=\"errors\">\n      <div class=\"hs-input__errors\">\n        <div class=\"hs-input__error\" *ngFor=\"let error of errors | keyvalue\">\n          {{ error.value }}\n        </div>\n      </div>\n    </ng-container>\n  </div>\n</div>\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "HsUiKitModule",
+            "id": "module-HsUiKitModule-dde99d47f34ffa246abc9777172b8239",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "projects/hs-ui-kit/src/lib/hs-ui-kit.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { ButtonComponent } from './button/button.component';\nimport { InputTextComponent } from './form/input-text/input-text.component';\nimport { CommonModule } from '@angular/common';\nimport { FormsModule } from '@angular/forms';\nimport { IconComponent } from './icon/icon.component';\n\n@NgModule({\n  declarations: [\n    ButtonComponent,\n    InputTextComponent,\n    IconComponent,\n  ],\n  imports: [\n    CommonModule,\n    FormsModule,\n  ],\n  exports: [\n    ButtonComponent\n  ],\n})\nexport class HsUiKitModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        },
+                        {
+                            "name": "IconComponent"
+                        },
+                        {
+                            "name": "InputTextComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Base",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "BaseAccent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "BaseCyan",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "BaseDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "BasePrimary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "BaseWarning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/hs-ui-kit/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "Flat",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "FlatAccent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "FlatCyan",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "FlatDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "FlatPrimary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "FlatWarning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "noop",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(_?: any) => {}"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/hs-ui-kit/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "Stroked",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "StrokedAccent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "StrokedCyan",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "StrokedDisabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "StrokedPrimary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "StrokedWarning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "buttonColors",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"base\" | \"primary\" | \"accent\" | \"warning\" | \"cyan\"",
+                "file": "projects/hs-ui-kit/src/lib/button/button.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "buttonKinds",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"base\" | \"flat\" | \"stroked\"",
+                "file": "projects/hs-ui-kit/src/lib/button/button.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "stories/Button.stories.ts": [
+                {
+                    "name": "Base",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "BaseAccent",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "BaseCyan",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "BaseDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "BasePrimary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "BaseWarning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Flat",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "FlatAccent",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "FlatCyan",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "FlatDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "FlatPrimary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "FlatWarning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Stroked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "StrokedAccent",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "StrokedCyan",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "StrokedDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "StrokedPrimary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "StrokedWarning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                }
+            ],
+            "projects/hs-ui-kit/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/hs-ui-kit/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/hs-ui-kit/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts": [
+                {
+                    "name": "noop",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(_?: any) => {}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/hs-ui-kit/src/lib/button/button.component.ts": [
+                {
+                    "name": "buttonColors",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"base\" | \"primary\" | \"accent\" | \"warning\" | \"cyan\"",
+                    "file": "projects/hs-ui-kit/src/lib/button/button.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                },
+                {
+                    "name": "buttonKinds",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"base\" | \"flat\" | \"stroked\"",
+                    "file": "projects/hs-ui-kit/src/lib/button/button.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/hs-ui-kit/src/lib/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputTextComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "noop",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/hs-ui-kit/src/lib/icon/icon.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "IconComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/hs-ui-kit/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/hs-ui-kit/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Base",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BaseAccent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BaseCyan",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BaseDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BasePrimary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BaseWarning",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Flat",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FlatAccent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FlatCyan",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FlatDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FlatPrimary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FlatWarning",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Stroked",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "StrokedAccent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "StrokedCyan",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "StrokedDisabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "StrokedPrimary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "StrokedWarning",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            }
+        ]
+    }
+}

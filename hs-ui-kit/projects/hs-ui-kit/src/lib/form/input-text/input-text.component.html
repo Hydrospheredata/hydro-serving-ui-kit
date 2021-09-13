@@ -1,0 +1,14 @@
+<div class="hs-input">
+  <label *ngIf="label" class="text-gray-900 uppercase text-xs	" [attr.for]="name">{{ label }}</label>
+  <div class="relative">
+    <hs-icon *ngIf="icon" class="absolute top-0.5	left-1 w-7 h-7 text-gray-300" [type]="icon"></hs-icon>
+    <input [ngClass]="inputClassMap" [(ngModel)]="value" [attr.id]="name" />
+    <ng-container *ngIf="errors">
+      <div class="hs-input__errors">
+        <div class="hs-input__error" *ngFor="let error of errors | keyvalue">
+          {{ error.value }}
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
