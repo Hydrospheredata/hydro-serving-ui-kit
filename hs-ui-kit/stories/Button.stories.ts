@@ -1,13 +1,19 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import Button from './button.component';
-import 'tailwindcss/tailwind.css';
 
 export default {
   title: 'Hydrosphere/Button',
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    kind: {
+      options: ['base', 'flat', 'stroked'],
+      control: { type: 'select' }
+    },
+    color: {
+      options: ['base', 'primary', 'accent', 'warning', 'cyan'],
+      control: { type: 'radio' }
+    }
+  }
 } as Meta;
 
 const Template: Story<Button> = (args: Button) => ({

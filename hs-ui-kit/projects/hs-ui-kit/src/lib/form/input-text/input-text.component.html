@@ -1,7 +1,9 @@
 <div class="hs-input">
-  <label *ngIf="label" class="text-gray-900 uppercase text-xs	" [attr.for]="name">{{ label }}</label>
-  <div class="relative">
-    <hs-icon *ngIf="icon" class="absolute top-0.5	left-1 w-7 h-7 text-gray-300" [type]="icon"></hs-icon>
+  <label *ngIf="label" class="hs-input__label" [attr.for]="name"
+  >{{ label }}</label
+  >
+  <div class="hs-input__control">
+    <hs-icon *ngIf="icon" class="hs-input__icon" name="{{icon}}"></hs-icon>
     <input [ngClass]="inputClassMap" [(ngModel)]="value" [attr.id]="name" />
     <ng-container *ngIf="errors">
       <div class="hs-input__errors">

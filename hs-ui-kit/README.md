@@ -1,27 +1,76 @@
-# Hydroserving UI Kit
+# <img src="https://gblobscdn.gitbook.com/spaces%2F-MESaD8WY3ggQLtBByXl%2Favatar-1597150668933.png?alt=media" alt="Hydrosphere.io logo" width="70"> HydroServing Ui Kit
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+UI Kit for the Hydrosphere.io project, containing the common UI components and integrated with the Storybook.
 
-## Development server
+![](projects/hs-ui-kit/src/assets/images/Storybook.gif)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+1. Run the following command:
+```
+  npm install hs-ui-kit
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Import `HsUiKitModule` in your main module.
 
-## Build
+**app.module.ts**
+```
+  import { NgModule } from '@angular/core';
+  import { BrowserModule } from '@angular/platform-browser';
+  import { HsUiKitModule } from 'hs-ui-kit';
+  import { AppRoutingModule } from './app-routing.module';
+  import { AppComponent } from './app.component';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  @NgModule({
+    declarations: [
+      AppComponent,
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HsUiKitModule,
+      // ...
+    ],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule {
+  }
+```
 
-## Running unit tests
+3. To add icons to your project include `IconsRegistryService` to providers of main module and register icons you need in the constructor.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**app.module.ts**
+```
+  import { NgModule } from '@angular/core';
+  import { BrowserModule } from '@angular/platform-browser';
+  import { HsUiKitModule, IconsRegistryService, hsIconsIconSearch } from 'hs-ui-kit';
+  import { AppRoutingModule } from './app-routing.module';
+  import { AppComponent } from './app.component';
 
-## Running end-to-end tests
+  @NgModule({
+    declarations: [
+      AppComponent,
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HsUiKitModule,
+      // ...
+    ],
+    providers: [IconsRegistryService],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule {
+    constructor(private iconRegistry: IconsRegistryService) {
+      this.iconRegistry.registerIcons([hsIconsIconSearch]);
+    }
+  }
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. To start storybook run the following command in the root directory:
 
-## Further help
+```
+  npm run storybook
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This will start a local webpack server on port 6006 and you can visit the generated storybook by going to http://localhost:6006/.

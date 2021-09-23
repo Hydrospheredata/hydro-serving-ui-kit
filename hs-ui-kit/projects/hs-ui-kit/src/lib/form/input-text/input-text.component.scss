@@ -1,22 +1,65 @@
+@import '../../../assets/styles/variables';
+
 .hs-input {
+  &__control {
+    position: relative;
+  }
+  &__label {
+    color: $neutral-color-1000;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  &__icon {
+    color: $neutral-color-300;
+    height: 24px;
+    left: 4px;
+    position: absolute;
+    top: 3px;
+    width: 24px;
+  }
+
   &__input {
-    @apply border border-gray-300 border-solid rounded text-gray-600 text-base w-full h-8 py-0.5 px-2;
+    border: 1px $neutral-color-300 solid;
+    border-radius: 4px;
+    color: $neutral-color-800;
+    font-size: 14px;
+    height: 28px;
+    padding: 2px 8px;
+    width: 100%;
     &--with-icon {
-      @apply pl-8;
+      padding-left: 28px;
     }
   }
 
   &__errors {
-    @apply flex items-center bg-red-500 text-gray-100 absolute text-sm p-1 w-full rounded;
+    display: flex;
+    align-items: center;
+    background: $supportive-color-red-500;
+    color: $neutral-color-100;
+    position: absolute;
+    font-size: 12px;
+    padding: 4px;
+    line-height: 14px;
+    width: 100%;
     top: calc(100% + 4px);
+    border-radius: 4px;
   }
 
-  &__error {
-    @apply relative pl-2.5 mr-2 top-1/2 left-1;
+  &__error{
+    position: relative;
+    padding-left: 10px;
+    margin-right: 7px;
     &::before {
-      @apply absolute w-2 h-2 bg-white;
       content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: white;
       border-radius: 50%;
+      top: 50%;
+      left: 2%;
       transform: translate(-50%, -50%);
     }
   }

@@ -1,24 +1,67 @@
-# HsUiKit
+# <img src="https://gblobscdn.gitbook.com/spaces%2F-MESaD8WY3ggQLtBByXl%2Favatar-1597150668933.png?alt=media" alt="Hydrosphere.io logo" width="70"> HydroServing Ui Kit
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+UI Kit for the Hydrosphere.io project, containing the common UI components and integrated with the Storybook.
 
-## Code scaffolding
+![](src/assets/images/Storybook.gif)
 
-Run `ng generate component component-name --project hs-ui-kit` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project hs-ui-kit`.
-> Note: Don't forget to add `--project hs-ui-kit` or else it will be added to the default project in your `angular.json` file. 
+## Getting Started
 
-## Build
+1. Run the following command:
+```
+  npm install hs-ui-kit
+```
+2. Import `HsUiKitModule` in your main module.
 
-Run `ng build hs-ui-kit` to build the project. The build artifacts will be stored in the `dist/` directory.
+**app.module.ts**
+```
+  import { NgModule } from '@angular/core';
+  import { BrowserModule } from '@angular/platform-browser';
+  import { HsUiKitModule } from 'hs-ui-kit';
+  import { AppRoutingModule } from './app-routing.module';
+  import { AppComponent } from './app.component';
 
-## Publishing
+  @NgModule({
+    declarations: [
+      AppComponent,
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HsUiKitModule,
+      // ...
+    ],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule {
+  }
+```
 
-After building your library with `ng build hs-ui-kit`, go to the dist folder `cd dist/hs-ui-kit` and run `npm publish`.
+3. To add icons to your project include `IconsRegistryService` to providers of main module and register icons you need in the constructor.
 
-## Running unit tests
+**app.module.ts**
+```
+  import { NgModule } from '@angular/core';
+  import { BrowserModule } from '@angular/platform-browser';
+  import { HsUiKitModule, IconsRegistryService, hsIconsIconSearch } from 'hs-ui-kit';
+  import { AppRoutingModule } from './app-routing.module';
+  import { AppComponent } from './app.component';
 
-Run `ng test hs-ui-kit` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  @NgModule({
+    declarations: [
+      AppComponent,
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HsUiKitModule,
+      // ...
+    ],
+    providers: [IconsRegistryService],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule {
+    constructor(private iconRegistry: IconsRegistryService) {
+      this.iconRegistry.registerIcons([hsIconsIconSearch]);
+    }
+  }
+```

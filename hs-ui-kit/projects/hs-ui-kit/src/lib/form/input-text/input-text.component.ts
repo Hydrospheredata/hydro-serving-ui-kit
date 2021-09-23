@@ -33,12 +33,12 @@ export class InputTextComponent implements ControlValueAccessor {
     }
   }
 
-  @Input() public name: string = '';
-  @Input() public label: string = '';
-  @Input() public icon: string = '';
-  @Input() public errors: { [err: string]: string } | null = {};
-  @Input() public disabled: boolean = false;
-  @Input() public placeholder: string = '';
+  @Input() public name: string | undefined;
+  @Input() public label: string | undefined;
+  @Input() public icon: string | undefined;
+  @Input() public errors: { [err: string]: string; } | null | undefined;
+  @Input() public disabled: boolean | undefined;
+  @Input() public placeholder: string | undefined;
 
   protected _value: any;
   protected onChange: (_: any) => void = noop;

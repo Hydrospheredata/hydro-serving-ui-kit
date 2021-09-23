@@ -1,119 +1,143 @@
+@import '../../assets/styles/variables';
+
 .hs-button {
-  @apply bg-transparent border-none rounded text-sm font-medium py-1.5 px-3.5 capitalize transition-colors cursor-pointer disabled:cursor-default;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  text-transform: capitalize;
+  transition: 0.3s color cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: default;
+  }
 
   &__icon {
-    @apply w-3.5 h-3.5;
+    width: 12px;
+    height: 12px;
   }
 }
 
 .hs-button--base {
-  @apply text-gray-900;
+  color: $neutral-color-1000;
 
   &:not([disabled]):hover {
-    @apply bg-gray-100;
+    background: $neutral-color-100;
   }
 
   &-primary {
-    @apply text-blue-700;
+    color: $primary-color-700;
 
     &:not([disabled]):hover {
-      @apply bg-blue-100;
+      background: $primary-color-100;
     }
   }
 
   &-accent {
-    @apply text-yellow-500;
+    color: $accent-color-700;
 
     &:not([disabled]):hover {
-      @apply bg-yellow-100;
+      background: $accent-color-100;
     }
   }
 
   &-warning {
-    @apply text-red-700;
+    color: $supportive-color-red-700;
 
     &:not([disabled]):hover {
-      @apply bg-red-100;
+      background: $supportive-color-red-100;
     }
   }
 
   &-cyan {
-    @apply text-green-600;
+    color: $supportive-color-cyan-700;
 
     &:not([disabled]):hover {
-      @apply bg-green-100;
+      background: $supportive-color-cyan-100;
     }
   }
 
   &[disabled] {
-    @apply text-gray-200;
+    color: $neutral-color-200;
   }
 }
 
 .hs-button--stroked {
-  @apply text-gray-900 border border-solid border-gray-200 py-1 px-3;
+  color: $neutral-color-1000;
+  border: 1px solid $neutral-color-200;
+  padding: 5px 11px;
 
   &:not([disabled]):hover {
-    @apply bg-gray-100;
+    background: $neutral-color-100;
   }
 
   &-primary {
-    @apply text-blue-700;
+    color: $primary-color-700;
 
     &:not([disabled]):hover {
-      @apply bg-blue-100;
+      background: $primary-color-100;
     }
   }
 
   &-accent {
-    @apply text-yellow-500;
+    color: $accent-color-700;
 
     &:not([disabled]):hover {
-      @apply bg-yellow-100;
+      background: $accent-color-100;
     }
   }
 
   &-warning {
-    @apply text-red-700;
+    color: $supportive-color-red-700;
 
     &:not([disabled]):hover {
-      @apply bg-red-100;
+      background: $supportive-color-red-100;
     }
   }
 
   &-cyan {
-    @apply text-green-600;
+    color: $supportive-color-cyan-700;
 
     &:not([disabled]):hover {
-      @apply bg-green-100;
+      background: $supportive-color-cyan-100;
     }
   }
 
   &[disabled] {
-    @apply text-gray-200 border-gray-100;
+    color: $neutral-color-200;
+    border-color: $neutral-color-100;
   }
 }
 
 .hs-button--flat {
-  @apply text-gray-900 bg-white;
+  color: $neutral-color-1000;
+  background: white;
 
   &-primary {
-    @apply bg-blue-700 text-gray-100;
+    background: $primary-color-700;
+    color: $neutral-color-100;
   }
 
   &-accent {
-    @apply bg-yellow-500 text-gray-100;
+    background: $accent-color-700;
+    color: $neutral-color-100;
   }
 
   &-warning {
-    @apply bg-red-700 text-gray-100;
+    background: $supportive-color-red-700;
+    color: $neutral-color-100;
   }
 
   &-cyan {
-    @apply bg-green-600 text-gray-100;
+    background: $supportive-color-cyan-700;
+    color: $neutral-color-100;
   }
 
   &[disabled] {
-    @apply bg-gray-100 text-gray-200;
+    background-color: $neutral-color-100;
+    color: $neutral-color-200;
   }
 }
