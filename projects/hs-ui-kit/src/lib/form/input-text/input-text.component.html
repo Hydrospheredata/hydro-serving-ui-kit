@@ -1,0 +1,21 @@
+<div class="hs-input">
+  <label *ngIf="label" class="hs-input__label" [attr.for]="name">
+    {{label}}
+  </label>
+  <div class="hs-input__control">
+    <hs-icon *ngIf="icon" class="hs-input__icon" name="{{ icon }}"></hs-icon>
+    <input
+      [ngClass]="inputClassMap"
+      [(ngModel)]="value"
+      [attr.id]="name"
+      [disabled]="disabled"
+    />
+    <ng-container *ngIf="errors">
+      <div class="hs-input__errors">
+        <div class="hs-input__error" *ngFor="let error of errors | keyvalue">
+          {{ error.value }}
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
