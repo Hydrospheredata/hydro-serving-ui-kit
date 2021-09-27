@@ -2,7 +2,7 @@
 
 UI Kit for the Hydrosphere.io project, containing the common UI components and integrated with the Storybook.
 
-![](projects/hs-ui-kit/src/assets/images/Storybook.gif)
+![](src/assets/images/Storybook.gif)
 
 ## Getting Started
 
@@ -10,7 +10,6 @@ UI Kit for the Hydrosphere.io project, containing the common UI components and i
 ```
   npm install hs-ui-kit
 ```
-
 2. Import `HsUiKitModule` in your main module.
 
 **app.module.ts**
@@ -66,11 +65,3 @@ UI Kit for the Hydrosphere.io project, containing the common UI components and i
     }
   }
 ```
-
-4. To start storybook run the following command in the root directory:
-
-```
-  npm run storybook
-```
-
-This will start a local webpack server on port 6006 and you can visit the generated storybook by going to http://localhost:6006/.
