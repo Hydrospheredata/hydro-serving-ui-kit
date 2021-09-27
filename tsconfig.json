@@ -11,7 +11,8 @@
       "hs-ui-kit": [
         "dist/hs-ui-kit/hs-ui-kit",
         "dist/hs-ui-kit"
-      ]
+      ],
+      "@components/*": ["projects/hs-ui-kit/src/lib/*"]
     },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,

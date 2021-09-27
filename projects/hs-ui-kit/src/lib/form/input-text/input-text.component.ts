@@ -37,7 +37,7 @@ export class InputTextComponent implements ControlValueAccessor {
   @Input() public label: string | undefined;
   @Input() public icon: string | undefined;
   @Input() public errors: { [err: string]: string } | null | undefined;
-  @Input() public disabled: boolean | undefined;
+  @Input() public disabled: string | boolean = 'false';
   @Input() public placeholder: string | undefined;
 
   protected _value: any;

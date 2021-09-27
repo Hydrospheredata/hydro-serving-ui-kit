@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { ButtonComponent } from '../projects/hs-ui-kit/src/lib/button/button.component';
+import { ButtonComponent } from '@components/button/button.component';
 
 export default {
   title: 'Hydrosphere/Button',

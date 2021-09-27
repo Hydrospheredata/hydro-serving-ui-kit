@@ -1,7 +1,7 @@
 import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { iconsNames } from '../projects/hs-ui-kit/src/lib/icon/icons-names';
+import { iconsNames } from '@components/icon/icons-names';
 import IconsComponent from './icons.component';
 import IconComponent from './icon.component';
 

@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AlertMessageComponent } from '../projects/hs-ui-kit/src/lib/alert-message/alert-message.component';
+import { AlertMessageComponent } from '@components/alert-message/alert-message.component';
 
 export default {
   title: 'Hydrosphere/AlertMessage',

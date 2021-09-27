@@ -237,7 +237,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../assets/styles/variables';\n\n.hs-button {\n  background: transparent;\n  border: none;\n  border-radius: 3px;\n  font-size: 12px;\n  font-weight: 500;\n  padding: 6px 12px;\n  text-transform: capitalize;\n  transition: 0.3s color cubic-bezier(0.075, 0.82, 0.165, 1);\n  cursor: pointer;\n\n  &[disabled] {\n    cursor: default;\n  }\n\n  &__icon {\n    width: 12px;\n    height: 12px;\n  }\n}\n\n.hs-button--base {\n  color: $neutral-color-1000;\n\n  &:not([disabled]):hover {\n    background: $neutral-color-100;\n  }\n\n  &-primary {\n    color: $primary-color-700;\n\n    &:not([disabled]):hover {\n      background: $primary-color-100;\n    }\n  }\n\n  &-accent {\n    color: $accent-color-700;\n\n    &:not([disabled]):hover {\n      background: $accent-color-100;\n    }\n  }\n\n  &-warning {\n    color: $supportive-color-red-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-red-100;\n    }\n  }\n\n  &-cyan {\n    color: $supportive-color-cyan-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-cyan-100;\n    }\n  }\n\n  &[disabled] {\n    color: $neutral-color-200;\n  }\n}\n\n.hs-button--stroked {\n  color: $neutral-color-1000;\n  border: 1px solid $neutral-color-200;\n  padding: 5px 11px;\n\n  &:not([disabled]):hover {\n    background: $neutral-color-100;\n  }\n\n  &-primary {\n    color: $primary-color-700;\n\n    &:not([disabled]):hover {\n      background: $primary-color-100;\n    }\n  }\n\n  &-accent {\n    color: $accent-color-700;\n\n    &:not([disabled]):hover {\n      background: $accent-color-100;\n    }\n  }\n\n  &-warning {\n    color: $supportive-color-red-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-red-100;\n    }\n  }\n\n  &-cyan {\n    color: $supportive-color-cyan-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-cyan-100;\n    }\n  }\n\n  &[disabled] {\n    color: $neutral-color-200;\n    border-color: $neutral-color-100;\n  }\n}\n\n.hs-button--flat {\n  color: $neutral-color-1000;\n  background: white;\n\n  &-primary {\n    background: $primary-color-700;\n    color: $neutral-color-100;\n  }\n\n  &-accent {\n    background: $accent-color-700;\n    color: $neutral-color-100;\n  }\n\n  &-warning {\n    background: $supportive-color-red-700;\n    color: $neutral-color-100;\n  }\n\n  &-cyan {\n    background: $supportive-color-cyan-700;\n    color: $neutral-color-100;\n  }\n\n  &[disabled] {\n    background-color: $neutral-color-100;\n    color: $neutral-color-200;\n  }\n}\n",
+                    "data": "@import 'variables';\n\n.hs-button {\n  background: transparent;\n  border: none;\n  border-radius: 3px;\n  font-size: 12px;\n  font-weight: 500;\n  padding: 6px 12px;\n  text-transform: capitalize;\n  transition: 0.3s color cubic-bezier(0.075, 0.82, 0.165, 1);\n  cursor: pointer;\n\n  &[disabled] {\n    cursor: default;\n  }\n\n  &__icon {\n    width: 12px;\n    height: 12px;\n  }\n}\n\n.hs-button--base {\n  color: $neutral-color-1000;\n\n  &:not([disabled]):hover {\n    background: $neutral-color-100;\n  }\n\n  &-primary {\n    color: $primary-color-700;\n\n    &:not([disabled]):hover {\n      background: $primary-color-100;\n    }\n  }\n\n  &-accent {\n    color: $accent-color-700;\n\n    &:not([disabled]):hover {\n      background: $accent-color-100;\n    }\n  }\n\n  &-warning {\n    color: $supportive-color-red-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-red-100;\n    }\n  }\n\n  &-cyan {\n    color: $supportive-color-cyan-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-cyan-100;\n    }\n  }\n\n  &[disabled] {\n    color: $neutral-color-200;\n  }\n}\n\n.hs-button--stroked {\n  color: $neutral-color-1000;\n  border: 1px solid $neutral-color-200;\n  padding: 5px 11px;\n\n  &:not([disabled]):hover {\n    background: $neutral-color-100;\n  }\n\n  &-primary {\n    color: $primary-color-700;\n\n    &:not([disabled]):hover {\n      background: $primary-color-100;\n    }\n  }\n\n  &-accent {\n    color: $accent-color-700;\n\n    &:not([disabled]):hover {\n      background: $accent-color-100;\n    }\n  }\n\n  &-warning {\n    color: $supportive-color-red-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-red-100;\n    }\n  }\n\n  &-cyan {\n    color: $supportive-color-cyan-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-cyan-100;\n    }\n  }\n\n  &[disabled] {\n    color: $neutral-color-200;\n    border-color: $neutral-color-100;\n  }\n}\n\n.hs-button--flat {\n  color: $neutral-color-1000;\n  background: white;\n\n  &-primary {\n    background: $primary-color-700;\n    color: $neutral-color-100;\n  }\n\n  &-accent {\n    background: $accent-color-700;\n    color: $neutral-color-100;\n  }\n\n  &-warning {\n    background: $supportive-color-red-700;\n    color: $neutral-color-100;\n  }\n\n  &-cyan {\n    background: $supportive-color-cyan-700;\n    color: $neutral-color-100;\n  }\n\n  &[disabled] {\n    background-color: $neutral-color-100;\n    color: $neutral-color-200;\n  }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -935,7 +935,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../../assets/styles/variables';\n\n.hs-input {\n  &__control {\n    position: relative;\n  }\n  &__label {\n    color: $neutral-color-1000;\n    text-transform: uppercase;\n    font-size: 10px;\n    line-height: 12px;\n  }\n\n  &__icon {\n    color: $neutral-color-300;\n    height: 24px;\n    left: 4px;\n    position: absolute;\n    top: 3px;\n    width: 24px;\n  }\n\n  &__input {\n    border: 1px $neutral-color-300 solid;\n    border-radius: 4px;\n    color: $neutral-color-800;\n    font-size: 14px;\n    height: 28px;\n    padding: 2px 8px;\n    width: 100%;\n    &--with-icon {\n      padding-left: 28px;\n    }\n  }\n\n  &__errors {\n    display: flex;\n    align-items: center;\n    background: $supportive-color-red-500;\n    color: $neutral-color-100;\n    position: absolute;\n    font-size: 12px;\n    padding: 4px;\n    line-height: 14px;\n    width: 100%;\n    top: calc(100% + 4px);\n    border-radius: 4px;\n  }\n\n  &__error{\n    position: relative;\n    padding-left: 10px;\n    margin-right: 7px;\n    &::before {\n      content: '';\n      position: absolute;\n      width: 8px;\n      height: 8px;\n      background-color: white;\n      border-radius: 50%;\n      top: 50%;\n      left: 2%;\n      transform: translate(-50%, -50%);\n    }\n  }\n}\n",
+                    "data": "@import 'variables';\n\n.hs-input {\n  &__control {\n    position: relative;\n  }\n  &__label {\n    color: $neutral-color-1000;\n    text-transform: uppercase;\n    font-size: 10px;\n    line-height: 12px;\n  }\n\n  &__icon {\n    color: $neutral-color-300;\n    height: 24px;\n    left: 4px;\n    position: absolute;\n    top: 3px;\n    width: 24px;\n  }\n\n  &__input {\n    border: 1px $neutral-color-300 solid;\n    border-radius: 4px;\n    color: $neutral-color-800;\n    font-size: 14px;\n    height: 28px;\n    padding: 2px 8px;\n    width: 100%;\n    &--with-icon {\n      padding-left: 28px;\n    }\n  }\n\n  &__errors {\n    display: flex;\n    align-items: center;\n    background: $supportive-color-red-500;\n    color: $neutral-color-100;\n    position: absolute;\n    font-size: 12px;\n    padding: 4px;\n    line-height: 14px;\n    width: 100%;\n    top: calc(100% + 4px);\n    border-radius: 4px;\n  }\n\n  &__error{\n    position: relative;\n    padding-left: 10px;\n    margin-right: 7px;\n    &::before {\n      content: '';\n      position: absolute;\n      width: 8px;\n      height: 8px;\n      background-color: white;\n      border-radius: 50%;\n      top: 50%;\n      left: 2%;\n      transform: translate(-50%, -50%);\n    }\n  }\n}\n",
                     "styleUrl": "./input-text.component.scss"
                 }
             ],
@@ -1913,6 +1913,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  props: { ...args },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/Icons.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1928,16 +1938,6 @@
                 "deprecationMessage": "",
                 "type": "Story<InputTextComponent>",
                 "defaultValue": "(args: InputTextComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  props: { ...args },\n})"
             },
             {
                 "name": "WithErrors",

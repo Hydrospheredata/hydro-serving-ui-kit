@@ -3,8 +3,8 @@ import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import IconComponent from './icon.component';
-import { InputTextComponent } from '../projects/hs-ui-kit/src/lib/form/input-text/input-text.component';
-import { iconsNames } from '../projects/hs-ui-kit/src/lib/icon/icons-names';
+import { InputTextComponent } from '@components/form/input-text/input-text.component';
+import { iconsNames } from '@components/icon/icons-names';
 
 export default {
   title: 'Hydrosphere/Input',
