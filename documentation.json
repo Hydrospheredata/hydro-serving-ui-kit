@@ -237,7 +237,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import 'variables';\n\n.hs-button {\n  background: transparent;\n  border: none;\n  border-radius: 3px;\n  font-size: 12px;\n  font-weight: 500;\n  padding: 6px 12px;\n  text-transform: capitalize;\n  transition: 0.3s color cubic-bezier(0.075, 0.82, 0.165, 1);\n  cursor: pointer;\n\n  &[disabled] {\n    cursor: default;\n  }\n\n  &__icon {\n    width: 12px;\n    height: 12px;\n  }\n}\n\n.hs-button--base {\n  color: $neutral-color-1000;\n\n  &:not([disabled]):hover {\n    background: $neutral-color-100;\n  }\n\n  &-primary {\n    color: $primary-color-700;\n\n    &:not([disabled]):hover {\n      background: $primary-color-100;\n    }\n  }\n\n  &-accent {\n    color: $accent-color-700;\n\n    &:not([disabled]):hover {\n      background: $accent-color-100;\n    }\n  }\n\n  &-warning {\n    color: $supportive-color-red-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-red-100;\n    }\n  }\n\n  &-cyan {\n    color: $supportive-color-cyan-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-cyan-100;\n    }\n  }\n\n  &[disabled] {\n    color: $neutral-color-200;\n  }\n}\n\n.hs-button--stroked {\n  color: $neutral-color-1000;\n  border: 1px solid $neutral-color-200;\n  padding: 5px 11px;\n\n  &:not([disabled]):hover {\n    background: $neutral-color-100;\n  }\n\n  &-primary {\n    color: $primary-color-700;\n\n    &:not([disabled]):hover {\n      background: $primary-color-100;\n    }\n  }\n\n  &-accent {\n    color: $accent-color-700;\n\n    &:not([disabled]):hover {\n      background: $accent-color-100;\n    }\n  }\n\n  &-warning {\n    color: $supportive-color-red-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-red-100;\n    }\n  }\n\n  &-cyan {\n    color: $supportive-color-cyan-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-cyan-100;\n    }\n  }\n\n  &[disabled] {\n    color: $neutral-color-200;\n    border-color: $neutral-color-100;\n  }\n}\n\n.hs-button--flat {\n  color: $neutral-color-1000;\n  background: white;\n\n  &-primary {\n    background: $primary-color-700;\n    color: $neutral-color-100;\n  }\n\n  &-accent {\n    background: $accent-color-700;\n    color: $neutral-color-100;\n  }\n\n  &-warning {\n    background: $supportive-color-red-700;\n    color: $neutral-color-100;\n  }\n\n  &-cyan {\n    background: $supportive-color-cyan-700;\n    color: $neutral-color-100;\n  }\n\n  &[disabled] {\n    background-color: $neutral-color-100;\n    color: $neutral-color-200;\n  }\n}\n",
+                    "data": "@import '../../assets/styles/variables';\n\n.hs-button {\n  background: transparent;\n  border: none;\n  border-radius: 3px;\n  font-size: 12px;\n  font-weight: 500;\n  padding: 6px 12px;\n  text-transform: capitalize;\n  transition: 0.3s color cubic-bezier(0.075, 0.82, 0.165, 1);\n  cursor: pointer;\n\n  &[disabled] {\n    cursor: default;\n  }\n\n  &__icon {\n    width: 12px;\n    height: 12px;\n  }\n}\n\n.hs-button--base {\n  color: $neutral-color-1000;\n\n  &:not([disabled]):hover {\n    background: $neutral-color-100;\n  }\n\n  &-primary {\n    color: $primary-color-700;\n\n    &:not([disabled]):hover {\n      background: $primary-color-100;\n    }\n  }\n\n  &-accent {\n    color: $accent-color-700;\n\n    &:not([disabled]):hover {\n      background: $accent-color-100;\n    }\n  }\n\n  &-warning {\n    color: $supportive-color-red-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-red-100;\n    }\n  }\n\n  &-cyan {\n    color: $supportive-color-cyan-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-cyan-100;\n    }\n  }\n\n  &[disabled] {\n    color: $neutral-color-200;\n  }\n}\n\n.hs-button--stroked {\n  color: $neutral-color-1000;\n  border: 1px solid $neutral-color-200;\n  padding: 5px 11px;\n\n  &:not([disabled]):hover {\n    background: $neutral-color-100;\n  }\n\n  &-primary {\n    color: $primary-color-700;\n\n    &:not([disabled]):hover {\n      background: $primary-color-100;\n    }\n  }\n\n  &-accent {\n    color: $accent-color-700;\n\n    &:not([disabled]):hover {\n      background: $accent-color-100;\n    }\n  }\n\n  &-warning {\n    color: $supportive-color-red-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-red-100;\n    }\n  }\n\n  &-cyan {\n    color: $supportive-color-cyan-700;\n\n    &:not([disabled]):hover {\n      background: $supportive-color-cyan-100;\n    }\n  }\n\n  &[disabled] {\n    color: $neutral-color-200;\n    border-color: $neutral-color-100;\n  }\n}\n\n.hs-button--flat {\n  color: $neutral-color-1000;\n  background: white;\n\n  &-primary {\n    background: $primary-color-700;\n    color: $neutral-color-100;\n  }\n\n  &-accent {\n    background: $accent-color-700;\n    color: $neutral-color-100;\n  }\n\n  &-warning {\n    background: $supportive-color-red-700;\n    color: $neutral-color-100;\n  }\n\n  &-cyan {\n    background: $supportive-color-cyan-700;\n    color: $neutral-color-100;\n  }\n\n  &[disabled] {\n    background-color: $neutral-color-100;\n    color: $neutral-color-200;\n  }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -673,69 +673,77 @@
             }
         },
         {
-            "name": "InputTextComponent",
-            "id": "component-InputTextComponent-d66aeb7dcd059b574b82aca4cb9bfbfb",
-            "file": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+            "name": "InputComponent",
+            "id": "component-InputComponent-5f6ec9d33152841c92a1a51563239d82",
+            "file": "projects/hs-ui-kit/src/lib/form/input/input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [
                 {
-                    "name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputTextComponent), multi: true,\n}",
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputComponent), multi: true,\n}",
                     "type": "component"
                 }
             ],
-            "selector": "hs-input-text",
+            "selector": "hs-input",
             "styleUrls": [
-                "./input-text.component.scss"
+                "./input.component.scss"
             ],
             "styles": [],
             "templateUrl": [
-                "./input-text.component.html"
+                "./input.component.html"
             ],
             "viewProviders": [],
             "inputsClass": [
                 {
                     "name": "disabled",
+                    "defaultValue": "'false'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 40,
-                    "type": "boolean | undefined"
+                    "line": 41,
+                    "type": "string | boolean"
                 },
                 {
                     "name": "errors",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 39,
+                    "line": 40,
                     "type": "literal type | null | undefined"
                 },
                 {
                     "name": "icon",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 38,
+                    "line": 39,
                     "type": "string | undefined"
                 },
                 {
                     "name": "label",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 37,
+                    "line": 38,
                     "type": "string | undefined"
                 },
                 {
                     "name": "name",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 36,
+                    "line": 37,
                     "type": "string | undefined"
                 },
                 {
                     "name": "placeholder",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 41,
+                    "line": 42,
+                    "type": "string | undefined"
+                },
+                {
+                    "name": "type",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
                     "type": "string | undefined"
                 }
             ],
@@ -748,7 +756,7 @@
                     "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 43,
+                    "line": 44,
                     "modifierKind": [
                         121
                     ]
@@ -761,7 +769,7 @@
                     "type": "function",
                     "optional": false,
                     "description": "",
-                    "line": 44,
+                    "line": 45,
                     "modifierKind": [
                         121
                     ]
@@ -774,7 +782,7 @@
                     "type": "function",
                     "optional": false,
                     "description": "",
-                    "line": 45,
+                    "line": 46,
                     "modifierKind": [
                         121
                     ]
@@ -794,7 +802,7 @@
                     "optional": false,
                     "returnType": "boolean",
                     "typeParameters": [],
-                    "line": 69,
+                    "line": 70,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -833,7 +841,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 61,
+                    "line": 62,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -873,7 +881,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 65,
+                    "line": 66,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -905,7 +913,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 55,
+                    "line": 56,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -931,12 +939,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, forwardRef } from '@angular/core';\nimport {\n  ControlValueAccessor,\n  NG_VALUE_ACCESSOR,\n  NgModel,\n} from '@angular/forms';\n\nconst noop = (_?: any) => {};\n\n@Component({\n  selector: 'hs-input-text',\n  templateUrl: './input-text.component.html',\n  styleUrls: ['./input-text.component.scss'],\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      // eslint-disable-next-line @angular-eslint/no-forward-ref\n      useExisting: forwardRef(() => InputTextComponent),\n      multi: true,\n    },\n  ],\n})\nexport class InputTextComponent implements ControlValueAccessor {\n  get value(): any {\n    return this._value;\n  }\n\n  set value(value: any) {\n    if (value !== this._value) {\n      this._value = value;\n      this.onChange(value);\n    }\n  }\n\n  @Input() public name: string | undefined;\n  @Input() public label: string | undefined;\n  @Input() public icon: string | undefined;\n  @Input() public errors: { [err: string]: string } | null | undefined;\n  @Input() public disabled: boolean | undefined;\n  @Input() public placeholder: string | undefined;\n\n  protected _value: any;\n  protected onChange: (_: any) => void = noop;\n  protected onTouched: () => void = noop;\n\n  get inputClassMap(): { [p: string]: boolean } {\n    const rootClass = 'hs-input__input';\n    return {\n      [rootClass]: true,\n      [`${rootClass}--with-icon`]: this.icon !== undefined,\n    };\n  }\n\n  public writeValue(value: any) {\n    if (value !== this._value) {\n      this._value = value;\n    }\n  }\n\n  public registerOnChange(fn: (_: any) => void) {\n    this.onChange = fn;\n  }\n\n  public registerOnTouched(fn: () => void) {\n    this.onTouched = fn;\n  }\n\n  public hasErrors(input: NgModel): boolean {\n    return <boolean>input.touched && this.errors != null;\n  }\n}\n",
+            "sourceCode": "import { Component, Input, forwardRef } from '@angular/core';\nimport {\n  ControlValueAccessor,\n  NG_VALUE_ACCESSOR,\n  NgModel,\n} from '@angular/forms';\n\nconst noop = (_?: any) => {};\n\n@Component({\n  selector: 'hs-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.scss'],\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      // eslint-disable-next-line @angular-eslint/no-forward-ref\n      useExisting: forwardRef(() => InputComponent),\n      multi: true,\n    },\n  ],\n})\nexport class InputComponent implements ControlValueAccessor {\n  get value(): any {\n    return this._value;\n  }\n\n  set value(value: any) {\n    if (value !== this._value) {\n      this._value = value;\n      this.onChange(value);\n    }\n  }\n\n  @Input() public type: string | undefined;\n  @Input() public name: string | undefined;\n  @Input() public label: string | undefined;\n  @Input() public icon: string | undefined;\n  @Input() public errors: { [err: string]: string } | null | undefined;\n  @Input() public disabled: string | boolean = 'false';\n  @Input() public placeholder: string | undefined;\n\n  protected _value: any;\n  protected onChange: (_: any) => void = noop;\n  protected onTouched: () => void = noop;\n\n  get inputClassMap(): { [p: string]: boolean } {\n    const rootClass = 'hs-input__input';\n    return {\n      [rootClass]: true,\n      [`${rootClass}--with-icon`]: this.icon !== undefined,\n    };\n  }\n\n  public writeValue(value: any) {\n    if (value !== this._value) {\n      this._value = value;\n    }\n  }\n\n  public registerOnChange(fn: (_: any) => void) {\n    this.onChange = fn;\n  }\n\n  public registerOnTouched(fn: () => void) {\n    this.onTouched = fn;\n  }\n\n  public hasErrors(input: NgModel): boolean {\n    return <boolean>input.touched && this.errors != null;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import 'variables';\n\n.hs-input {\n  &__control {\n    position: relative;\n  }\n  &__label {\n    color: $neutral-color-1000;\n    text-transform: uppercase;\n    font-size: 10px;\n    line-height: 12px;\n  }\n\n  &__icon {\n    color: $neutral-color-300;\n    height: 24px;\n    left: 4px;\n    position: absolute;\n    top: 3px;\n    width: 24px;\n  }\n\n  &__input {\n    border: 1px $neutral-color-300 solid;\n    border-radius: 4px;\n    color: $neutral-color-800;\n    font-size: 14px;\n    height: 28px;\n    padding: 2px 8px;\n    width: 100%;\n    &--with-icon {\n      padding-left: 28px;\n    }\n  }\n\n  &__errors {\n    display: flex;\n    align-items: center;\n    background: $supportive-color-red-500;\n    color: $neutral-color-100;\n    position: absolute;\n    font-size: 12px;\n    padding: 4px;\n    line-height: 14px;\n    width: 100%;\n    top: calc(100% + 4px);\n    border-radius: 4px;\n  }\n\n  &__error{\n    position: relative;\n    padding-left: 10px;\n    margin-right: 7px;\n    &::before {\n      content: '';\n      position: absolute;\n      width: 8px;\n      height: 8px;\n      background-color: white;\n      border-radius: 50%;\n      top: 50%;\n      left: 2%;\n      transform: translate(-50%, -50%);\n    }\n  }\n}\n",
-                    "styleUrl": "./input-text.component.scss"
+                    "data": "@import '../../../assets/styles/variables';\n\n.hs-input {\n  &__control {\n    position: relative;\n  }\n  &__label {\n    color: $neutral-color-1000;\n    text-transform: uppercase;\n    font-size: 10px;\n    line-height: 12px;\n  }\n\n  &__icon {\n    color: $neutral-color-300;\n    height: 24px;\n    left: 4px;\n    position: absolute;\n    top: 3px;\n    width: 24px;\n  }\n\n  &__input {\n    border: 1px $neutral-color-300 solid;\n    border-radius: 4px;\n    color: $neutral-color-800;\n    font-size: 14px;\n    height: 28px;\n    padding: 2px 8px;\n    width: 100%;\n    &--with-icon {\n      padding-left: 28px;\n    }\n  }\n\n  &__errors {\n    display: flex;\n    align-items: center;\n    background: $supportive-color-red-500;\n    color: $neutral-color-100;\n    position: absolute;\n    font-size: 12px;\n    padding: 4px;\n    line-height: 14px;\n    width: 100%;\n    top: calc(100% + 4px);\n    border-radius: 4px;\n  }\n\n  &__error{\n    position: relative;\n    padding-left: 10px;\n    margin-right: 7px;\n    &::before {\n      content: '';\n      position: absolute;\n      width: 8px;\n      height: 8px;\n      background-color: white;\n      border-radius: 50%;\n      top: 50%;\n      left: 2%;\n      transform: translate(-50%, -50%);\n    }\n  }\n}\n",
+                    "styleUrl": "./input.component.scss"
                 }
             ],
             "stylesData": "",
@@ -986,23 +994,23 @@
                         "name": "inputClassMap",
                         "type": "literal type",
                         "returnType": "literal type",
-                        "line": 47
+                        "line": 48
                     }
                 }
             },
-            "templateData": "<div class=\"hs-input\">\n  <label *ngIf=\"label\" class=\"hs-input__label\" [attr.for]=\"name\">\n    {{label}}\n  </label>\n  <div class=\"hs-input__control\">\n    <hs-icon *ngIf=\"icon\" class=\"hs-input__icon\" name=\"{{ icon }}\"></hs-icon>\n    <input\n      [ngClass]=\"inputClassMap\"\n      [(ngModel)]=\"value\"\n      [attr.id]=\"name\"\n      [disabled]=\"disabled\"\n    />\n    <ng-container *ngIf=\"errors\">\n      <div class=\"hs-input__errors\">\n        <div class=\"hs-input__error\" *ngFor=\"let error of errors | keyvalue\">\n          {{ error.value }}\n        </div>\n      </div>\n    </ng-container>\n  </div>\n</div>\n"
+            "templateData": "<div class=\"hs-input\">\n  <label *ngIf=\"label\" class=\"hs-input__label\" [attr.for]=\"name\">\n    {{label}}\n  </label>\n  <div class=\"hs-input__control\">\n    <hs-icon *ngIf=\"icon\" class=\"hs-input__icon\" name=\"{{ icon }}\"></hs-icon>\n    <input\n      [ngClass]=\"inputClassMap\"\n      [(ngModel)]=\"value\"\n      [attr.id]=\"name\"\n      [type]=\"type\"\n      [disabled]=\"disabled\"\n    />\n    <ng-container *ngIf=\"errors\">\n      <div class=\"hs-input__errors\">\n        <div class=\"hs-input__error\" *ngFor=\"let error of errors | keyvalue\">\n          {{ error.value }}\n        </div>\n      </div>\n    </ng-container>\n  </div>\n</div>\n"
         }
     ],
     "modules": [
         {
             "name": "HsUiKitModule",
-            "id": "module-HsUiKitModule-98c9d74dd712177632a745d2b5ca2214",
+            "id": "module-HsUiKitModule-c70a285e24299d04d3ae472a77f408ad",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/hs-ui-kit/src/lib/hs-ui-kit.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { FormsModule } from '@angular/forms';\nimport { InputTextComponent } from './form/input-text/input-text.component';\nimport { IconComponent } from './icon/icon.component';\nimport { IconsRegistryService } from './icon/icons-registry.service';\nimport { AlertMessageComponent } from './alert-message/alert-message.component';\nimport { ButtonComponent } from './button/button.component';\n\n@NgModule({\n  declarations: [\n    ButtonComponent,\n    InputTextComponent,\n    IconComponent,\n    AlertMessageComponent,\n  ],\n  imports: [CommonModule, FormsModule],\n  exports: [\n    ButtonComponent,\n    InputTextComponent,\n    IconComponent,\n    AlertMessageComponent,\n  ],\n  providers: [IconsRegistryService],\n})\nexport class HsUiKitModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { FormsModule } from '@angular/forms';\nimport { InputComponent } from './form/input/input.component';\nimport { IconComponent } from './icon/icon.component';\nimport { IconsRegistryService } from './icon/icons-registry.service';\nimport { AlertMessageComponent } from './alert-message/alert-message.component';\nimport { ButtonComponent } from './button/button.component';\n\n@NgModule({\n  declarations: [\n    ButtonComponent,\n    InputComponent,\n    IconComponent,\n    AlertMessageComponent,\n  ],\n  imports: [CommonModule, FormsModule],\n  exports: [\n    ButtonComponent,\n    InputComponent,\n    IconComponent,\n    AlertMessageComponent,\n  ],\n  providers: [IconsRegistryService],\n})\nexport class HsUiKitModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1025,7 +1033,7 @@
                             "name": "IconComponent"
                         },
                         {
-                            "name": "InputTextComponent"
+                            "name": "InputComponent"
                         }
                     ]
                 },
@@ -1043,7 +1051,7 @@
                             "name": "ButtonComponent"
                         },
                         {
-                            "name": "InputTextComponent"
+                            "name": "InputComponent"
                         }
                     ]
                 },
@@ -1824,11 +1832,21 @@
                 "name": "noop",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+                "file": "projects/hs-ui-kit/src/lib/form/input/input.component.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(_?: any) => {}"
+            },
+            {
+                "name": "NumberType",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "require",
@@ -1923,6 +1941,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/Input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputComponent>",
+                "defaultValue": "(args: InputComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/Icons.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1930,14 +1958,14 @@
                 "defaultValue": "(args: IconsComponent) => ({\n  props: args,\n})"
             },
             {
-                "name": "Template",
+                "name": "TextType",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<InputTextComponent>",
-                "defaultValue": "(args: InputTextComponent) => ({\n  props: args,\n})"
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "WithErrors",
@@ -2254,14 +2282,34 @@
                     "defaultValue": "Template.bind({})"
                 },
                 {
+                    "name": "NumberType",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "stories/Input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<InputTextComponent>",
-                    "defaultValue": "(args: InputTextComponent) => ({\n  props: args,\n})"
+                    "type": "Story<InputComponent>",
+                    "defaultValue": "(args: InputComponent) => ({\n  props: args,\n})"
+                },
+                {
+                    "name": "TextType",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 },
                 {
                     "name": "WithErrors",
@@ -2930,12 +2978,12 @@
                     "defaultValue": "[\n  'block',\n  'bookmark',\n  'calendar',\n  'check',\n  'circle_check',\n  'circle_x',\n  'clock',\n  'close',\n  'data_projection',\n  'dc',\n  'drift_report',\n  'error',\n  'favorite',\n  'help',\n  'icon_applications',\n  'icon_arrow_down',\n  'icon_arrow_left',\n  'icon_arrow_right',\n  'icon_arrow',\n  'icon_cancel',\n  'icon_check_fail',\n  'icon_check_success',\n  'icon_circle',\n  'icon_close_sidebar',\n  'icon_close',\n  'icon_cloud',\n  'icon_copy',\n  'icon_done',\n  'icon_edit',\n  'icon_error_outline',\n  'icon_folder',\n  'icon_help',\n  'icon_left',\n  'icon_loader',\n  'icon_models',\n  'icon_pending',\n  'icon_pipline',\n  'icon_plus',\n  'icon_remove_circle',\n  'icon_remove',\n  'icon_right',\n  'icon_search',\n  'icon_settings',\n  'icon_star',\n  'icon_start',\n  'icon_timemachine',\n  'icon_upgrade',\n  'icon_upload',\n  'icon_warning',\n  'info',\n  'logo',\n  'merge',\n  'monitoring',\n  'next',\n  'profiler',\n  'scatter',\n  'show',\n  'split',\n  'warning',\n]"
                 }
             ],
-            "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts": [
+            "projects/hs-ui-kit/src/lib/form/input/input.component.ts": [
                 {
                     "name": "noop",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+                    "file": "projects/hs-ui-kit/src/lib/form/input/input.component.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -2996,16 +3044,16 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+                "filePath": "projects/hs-ui-kit/src/lib/form/input/input.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "InputTextComponent",
+                "name": "InputComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/14",
+                "coverageCount": "0/15",
                 "status": "low"
             },
             {
-                "filePath": "projects/hs-ui-kit/src/lib/form/input-text/input-text.component.ts",
+                "filePath": "projects/hs-ui-kit/src/lib/form/input/input.component.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -3906,7 +3954,27 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "NumberType",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TextType",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

@@ -9,19 +9,19 @@ import {
 const noop = (_?: any) => {};
 
 @Component({
-  selector: 'hs-input-text',
-  templateUrl: './input-text.component.html',
-  styleUrls: ['./input-text.component.scss'],
+  selector: 'hs-input',
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
       // eslint-disable-next-line @angular-eslint/no-forward-ref
-      useExisting: forwardRef(() => InputTextComponent),
+      useExisting: forwardRef(() => InputComponent),
       multi: true,
     },
   ],
 })
-export class InputTextComponent implements ControlValueAccessor {
+export class InputComponent implements ControlValueAccessor {
   get value(): any {
     return this._value;
   }
@@ -33,6 +33,7 @@ export class InputTextComponent implements ControlValueAccessor {
     }
   }
 
+  @Input() public type: string | undefined;
   @Input() public name: string | undefined;
   @Input() public label: string | undefined;
   @Input() public icon: string | undefined;
