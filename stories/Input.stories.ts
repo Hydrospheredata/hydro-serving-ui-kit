@@ -3,12 +3,12 @@ import { moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import IconComponent from './icon.component';
-import { InputTextComponent } from '@components/form/input-text/input-text.component';
+import { InputComponent } from '@components/form/input/input.component';
 import { iconsNames } from '@components/icon/icons-names';
 
 export default {
   title: 'Hydrosphere/Input',
-  component: InputTextComponent,
+  component: InputComponent,
   decorators: [
     moduleMetadata({
       declarations: [IconComponent],
@@ -22,10 +22,14 @@ export default {
     },
     disabled: { type: 'boolean' },
     label: { type: 'text' },
+    type: {
+      options: ['text', 'number'],
+      control: { type: 'select' },
+    },
   },
 } as Meta;
 
-const Template: Story<InputTextComponent> = (args: InputTextComponent) => ({
+const Template: Story<InputComponent> = (args: InputComponent) => ({
   props: args,
 });
 
@@ -45,6 +49,16 @@ WithErrors.args = {
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   icon: 'icon_search',
+};
+
+export const TextType = Template.bind({});
+TextType.args = {
+  type: 'text',
+};
+
+export const NumberType = Template.bind({});
+NumberType.args = {
+  type: 'number',
 };
 
 export const Disabled = Template.bind({});
