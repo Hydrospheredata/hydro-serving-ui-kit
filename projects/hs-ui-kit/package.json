@@ -7,12 +7,5 @@
   },
   "dependencies": {
     "tslib": "^2.3.0"
-  },
-  "description": "UI Kit for the Hydrosphere.io project, containing the common UI components and integrated with the Storybook.",
-  "main": "karma.conf.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }
