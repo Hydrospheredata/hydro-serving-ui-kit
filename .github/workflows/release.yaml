@@ -96,12 +96,8 @@ jobs:
     - name: Install npm dependency
       run: npm install && npm build
 
-    - name: Add ngx-deploy-npm
-      run: npm run ng add ngx-deploy-npm
-
     - name: Publish npm package
-      run: npm run publish --access public
-
+      run: npm run publish
 
     - name: Push to repo
       if: github.event_name == 'workflow_dispatch'

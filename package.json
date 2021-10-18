@@ -12,7 +12,7 @@
     "build-storybook": "npm run docs:json && build-storybook",
     "generate-icons": "svg-to-ts -c constants -s projects/hs-ui-kit/src/assets/icons/**/*.svg -o projects/hs-ui-kit/src/lib/icon -f icons -p hsIcons -t hsIcon -i HsIcon",
     "lint": "ng lint",
-    "publish": "ng deploy"
+    "publish": "npm publish --access public"
   },
   "private": true,
   "dependencies": {
