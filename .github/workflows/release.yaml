@@ -77,11 +77,11 @@ jobs:
         level: patch
 
     - name: Set VERSION variable
-      if: env.VERSION == '' && github.event_name == 'workflow_dispatch'
+      if: env.VERSION == ''
       run: echo VERSION=${{ steps.bump-semver.outputs.new_version }} >> $GITHUB_ENV
       
     - name: Set VERSION variable
-      if: env.VERSION != '' && github.event_name == 'workflow_dispatch'
+      if: env.VERSION != ''
       run: echo VERSION=${{ env.VERSION }} >> $GITHUB_ENV
 
     - name: Find and Replace version
