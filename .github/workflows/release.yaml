@@ -95,7 +95,7 @@ jobs:
       run: | 
         echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> .npmrc
       env:
-        NODE_TOKEN: ${{secrets.NPM_TOKEN}}
+        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
     - name: Install npm dependency
       run: npm install
