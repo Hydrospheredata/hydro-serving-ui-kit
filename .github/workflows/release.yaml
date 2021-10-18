@@ -94,6 +94,9 @@ jobs:
     - name: Install npm dependency
       run: npm install
 
+    - name: add ngx-deploy-npm
+      run: ng add ngx-deploy-npm
+
     - name: Publish npm package
       run: npm run publish --access public
       env:
