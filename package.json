@@ -1,5 +1,5 @@
 {
-  "name": "hs-ui-kit",
+  "name": "@hydrosphere/hs-ui-kit",
   "version": "0.0.4",
   "scripts": {
     "ng": "ng",
