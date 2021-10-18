@@ -77,27 +77,28 @@ jobs:
         level: patch
 
     - name: Set VERSION variable
-      if: env.VERSION == '' && github.event_name == 'workflow_dispatch'
+      if: env.VERSION == ''
       run: echo VERSION=${{ steps.bump-semver.outputs.new_version }} >> $GITHUB_ENV
       
     - name: Set VERSION variable
-      if: env.VERSION != '' && github.event_name == 'workflow_dispatch'
+      if: env.VERSION != ''
       run: echo VERSION=${{ env.VERSION }} >> $GITHUB_ENV
 
-    - name: Find and Replace version
-      uses: jacobtomlinson/gha-find-replace@master
-      with:
-        find: "\"version\": \".*\""
-        replace: "\"version\": \"${{ env.VERSION }}\""
-        include: "package.json"
-        
+    - name: Bump npm version
+      run: npm version ${{ env.VERSION }} --no-git-tag-version
+
+    - name: Create npmrc
+      run: | 
+        echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> .npmrc
+      env:
+        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+
     - name: Install npm dependency
-      run: npm install
+      run: npm install && npm build
 
     - name: Publish npm package
-      run: npm run publish --access public
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      run: npm run publish
+
 
     - name: Push to repo
       if: github.event_name == 'workflow_dispatch'
