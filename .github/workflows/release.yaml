@@ -1,0 +1,123 @@
+name: Release
+on:
+  push:
+    branches:
+      - master
+      - main
+      
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: bump rule (major|feature|bug|rc)
+        default: bug
+        required: false
+
+      version:
+        description: release version, ommit for patch
+        default: ''
+        required: false
+
+      release:
+        description: release type (local|global)
+        default: local
+        required: false 
+
+# Secrets:
+#   DOCKERHUB_USERNAME - also used as the dockerhub repository url
+#   DOCKERHUB_PASSWORD
+#   HYDRO_SERVING_TOKEN - github token with write access to hydro-serving repo
+
+env:
+  HYDRO_SERVING_REPO: ${{ github.repository_owner }}/hydro-serving
+  IMAGE: hydro-serving-ui-kit # name of the built image
+  REGISTRY: hydrosphere
+  VERSION: ${{ github.event.inputs.version }}
+
+jobs:
+  Verify_version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+
+      - name: Get latest tag
+        id: get-latest-tag
+        uses: actions-ecosystem/action-get-latest-tag@v1
+
+    outputs:
+      latest_version: ${{ steps.get-latest-tag.outputs.tag }}
+
+  Build_and_publish:
+    needs: Verify_version
+    if: >
+      needs.Verify_version.outputs.latest_version != '$VERSION' && (
+      github.event_name == 'workflow_dispatch' || 
+      github.event_name == 'push')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Bump service version  
+    - name: Get latest tag
+      id: get-latest-tag
+      uses: actions-ecosystem/action-get-latest-tag@v1
+      with:
+        semver_only: true
+
+    - uses: actions-ecosystem/action-bump-semver@v1
+      id: bump-semver
+      with:
+        current_version: ${{ steps.get-latest-tag.outputs.tag }}
+        level: patch
+
+    - name: Set VERSION variable
+      if: env.VERSION == '' && github.event_name == 'workflow_dispatch'
+      run: echo VERSION=${{ steps.bump-semver.outputs.new_version }} >> $GITHUB_ENV
+      
+    - name: Set VERSION variable
+      if: env.VERSION != '' && github.event_name == 'workflow_dispatch'
+      run: echo VERSION=${{ env.VERSION }} >> $GITHUB_ENV
+
+    - name: Find and Replace version
+      uses: jacobtomlinson/gha-find-replace@master
+      with:
+        find: "\"version\": \".*\""
+        replace: "\"version\": \"${{ env.VERSION }}\""
+        include: "package.json"
+        
+    - name: Install npm dependency
+      run: npm install
+
+    - name: Publish npm package
+      run: npm run publish --access public
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+    - name: Push to repo
+      if: github.event_name == 'workflow_dispatch'
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        sudo chown -R "${USER:-$(id -un)}" .
+        git commit -m "Releasing ${{ env.IMAGE }}:${{ env.VERSION }}" -a --allow-empty
+        git push
+        
+    - name: Reports
+      id: generate-output
+      run: echo "::set-output name=tag-output::${{ env.VERSION }}"
+
+    - name: Create github release
+      if: github.event_name == 'workflow_dispatch'
+      uses: meeDamian/github-release@2.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ env.VERSION }}
+
+    outputs:
+      tag: ${{ steps.generate-output.outputs.tag-output }}
