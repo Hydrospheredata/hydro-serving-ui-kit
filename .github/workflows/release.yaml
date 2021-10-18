@@ -63,11 +63,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Global ident
-      run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-
     # Bump service version  
     - name: Get latest tag
       id: get-latest-tag
@@ -89,8 +84,12 @@ jobs:
       if: env.VERSION != ''
       run: echo VERSION=${{ env.VERSION }} >> $GITHUB_ENV
 
-    - name: Bump NPM version
-      run: npm version ${{ env.VERSION }}
+    - name: Find and Replace version
+      uses: jacobtomlinson/gha-find-replace@master
+      with:
+        find: "\"version\": \".*\""
+        replace: "\"version\": \"${{ env.VERSION }}\""
+        include: "package.json"
 
     - name: Create npmrc
       run: | 
@@ -103,6 +102,7 @@ jobs:
 
     - name: Publish npm package
       run: npm run publish
+
 
     - name: Push to repo
       if: github.event_name == 'workflow_dispatch'
