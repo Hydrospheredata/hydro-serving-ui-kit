@@ -90,17 +90,22 @@ jobs:
         find: "\"version\": \".*\""
         replace: "\"version\": \"${{ env.VERSION }}\""
         include: "package.json"
-        
+
+    - name: Create npmrc
+      run: | 
+        echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> .npmrc
+      env:
+        NODE_TOKEN: ${{secrets.NPM_TOKEN}}
+
     - name: Install npm dependency
       run: npm install
 
-    - name: add ngx-deploy-npm
+    - name: Add ngx-deploy-npm
       run: npm run ng add ngx-deploy-npm
 
     - name: Publish npm package
       run: npm run publish --access public
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
 
     - name: Push to repo
       if: github.event_name == 'workflow_dispatch'
