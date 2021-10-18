@@ -84,12 +84,8 @@ jobs:
       if: env.VERSION != ''
       run: echo VERSION=${{ env.VERSION }} >> $GITHUB_ENV
 
-    - name: Find and Replace version
-      uses: jacobtomlinson/gha-find-replace@master
-      with:
-        find: "\"version\": \".*\""
-        replace: "\"version\": \"${{ env.VERSION }}\""
-        include: "package.json"
+    - name: Bump NPM version
+      run: npm version ${{ env.VERSION }}
 
     - name: Create npmrc
       run: | 
@@ -98,7 +94,7 @@ jobs:
         NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
     - name: Install npm dependency
-      run: npm install
+      run: npm install && npm build
 
     - name: Add ngx-deploy-npm
       run: npm run ng add ngx-deploy-npm
