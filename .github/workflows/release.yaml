@@ -87,16 +87,16 @@ jobs:
     - name: Bump npm version
       run: cd projects/hs-ui-kit && npm version ${{ env.VERSION }} --no-git-tag-version
 
-    - name: Create npmrc
-      run: | 
-        echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> .npmrc
-      env:
-        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-
     - name: Install build
       run: | 
         npm ci
         npm run build:hs-ui-kit
+
+    - name: Create npmrc
+      run: | 
+        echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> dist/hs-ui-kit/.npmrc
+      env:
+        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
     - name: Publish npm package
       run: | 
