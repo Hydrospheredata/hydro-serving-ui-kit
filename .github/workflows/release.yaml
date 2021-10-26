@@ -85,7 +85,7 @@ jobs:
       run: echo VERSION=${{ env.VERSION }} >> $GITHUB_ENV
 
     - name: Bump npm version
-      run: npm version ${{ env.VERSION }} --no-git-tag-version
+      run: cd projects/hs-ui-kit && npm version ${{ env.VERSION }} --no-git-tag-version
 
     - name: Create npmrc
       run: | 
