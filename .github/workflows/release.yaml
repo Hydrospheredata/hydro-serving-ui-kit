@@ -93,13 +93,13 @@ jobs:
       env:
         NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
-    - name: Install npm dependency
-      run: npm ci
+    - name: Install build
+      run: | 
+        npm ci
+        npm run build:hs-ui-kit
 
     - name: Publish npm package
       run: | 
-        cd projects/hs-ui-kit
-        ng build hs-ui-kit --prod
         cd dist/hs-ui-kit
         npm publish --access public
 

@@ -11,7 +11,8 @@
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook",
     "generate-icons": "svg-to-ts -c constants -s projects/hs-ui-kit/src/assets/icons/**/*.svg -o projects/hs-ui-kit/src/lib/icon -f icons -p hsIcons -t hsIcon -i HsIcon",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build:hs-ui-kit": "cd projects/hs-ui-kit && ng build hs-ui-kit --prod"
   },
   "private": false,
   "dependencies": {
