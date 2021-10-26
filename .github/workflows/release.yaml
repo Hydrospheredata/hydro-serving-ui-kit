@@ -94,10 +94,10 @@ jobs:
         NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
     - name: Install npm dependency
-      run: npm install && npm build
+      run: cd projects/hs-ui-kit && npm install && npm build
 
     - name: Publish npm package
-      run: npm publish --access public
+      run: cd projects/hs-ui-kit && npm publish --access public
 
 
     - name: Push to repo
