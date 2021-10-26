@@ -94,7 +94,7 @@ jobs:
         NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
     - name: Install npm dependency
-      run: cd projects/hs-ui-kit && npm install
+      run: cd projects/hs-ui-kit && npm install && npm install -g @angular/cli > /dev/null
 
     - name: Publish npm package
       run: | 
