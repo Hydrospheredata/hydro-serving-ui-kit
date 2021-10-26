@@ -74,3 +74,12 @@ npm install @hydrosphere/hs-ui-kit
 ```
 
 This will start a local webpack server on port 6006 and you can visit the generated storybook by going to http://localhost:6006/.
+
+## How to publish new versions
+
+Run the following commands:
+
+* ```ng build hs-ui-kit --prod```;
+* ```cd dist/hs-ui-kit```;
+* ```npm publish --access public```.
+
