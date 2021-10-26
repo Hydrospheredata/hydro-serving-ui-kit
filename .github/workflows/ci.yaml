@@ -34,5 +34,5 @@ jobs:
         run: cd projects/hs-ui-kit && npm install
 
       - name: Build project
-        run: cd projects/hs-ui-kit && npm run build
+        run: cd projects/hs-ui-kit && npm ci && ng build hs-ui-kit --prod
 
