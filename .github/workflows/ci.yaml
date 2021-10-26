@@ -1,0 +1,38 @@
+name: ci
+on: pull_request
+
+# Secrets:
+#   DOCKERHUB_USERNAME - also used as the dockerhub repository url
+#   DOCKERHUB_PASSWORD
+
+env:
+  HYDRO_SERVING_REPO: Hydrospheredata/hydro-serving-ui-kit
+  IMAGE: hydro-serving-ui-kit # name of the built image
+
+jobs:
+        
+  Setup:
+  # Try to load dependecies from cache, install dependecies on cache miss
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+  Test:
+    runs-on: ubuntu-latest
+    needs: [Setup]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install npm dependency
+        run: cd projects/hs-ui-kit && npm install
+
+      - name: Build project
+        run: cd projects/hs-ui-kit && npm run build
+

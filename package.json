@@ -1,6 +1,6 @@
 {
-  "name": "hs-ui-kit",
-  "version": "0.0.0",
+  "name": "@hydrosphere/hs-ui-kit",
+  "version": "0.0.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -13,7 +13,7 @@
     "generate-icons": "svg-to-ts -c constants -s projects/hs-ui-kit/src/assets/icons/**/*.svg -o projects/hs-ui-kit/src/lib/icon -f icons -p hsIcons -t hsIcon -i HsIcon",
     "lint": "ng lint"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~12.2.0",
     "@angular/common": "~12.2.0",
@@ -65,6 +65,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^12.1.1",
+    "ngx-deploy-npm": "^2.1.0",
     "prettier": "^2.2.1",
     "prettier-eslint": "^13.0.0",
     "storybook-addon-pseudo-states": "^1.0.0",
