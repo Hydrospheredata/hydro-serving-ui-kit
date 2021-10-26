@@ -8,7 +8,7 @@ UI Kit for the Hydrosphere.io project, containing the common UI components and i
 
 1. Run the following command:
 ```
-  npm install hs-ui-kit
+  npm install @hydrosphere/hs-ui-kit
 ```
 2. Import `HsUiKitModule` in your main module.
 
@@ -16,7 +16,7 @@ UI Kit for the Hydrosphere.io project, containing the common UI components and i
 ```
   import { NgModule } from '@angular/core';
   import { BrowserModule } from '@angular/platform-browser';
-  import { HsUiKitModule } from 'hs-ui-kit';
+  import { HsUiKitModule } from '@hydrosphere/hs-ui-kit';
   import { AppRoutingModule } from './app-routing.module';
   import { AppComponent } from './app.component';
 
@@ -42,7 +42,7 @@ UI Kit for the Hydrosphere.io project, containing the common UI components and i
 ```
   import { NgModule } from '@angular/core';
   import { BrowserModule } from '@angular/platform-browser';
-  import { HsUiKitModule, IconsRegistryService, hsIconsIconSearch } from 'hs-ui-kit';
+  import { HsUiKitModule, IconsRegistryService, hsIconsIconSearch } from '@hydrosphere/hs-ui-kit';
   import { AppRoutingModule } from './app-routing.module';
   import { AppComponent } from './app.component';
 
