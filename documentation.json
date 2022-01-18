@@ -3,7 +3,7 @@
     "interfaces": [
         {
             "name": "HsIcon",
-            "id": "interface-HsIcon-05e8513cf637a548930ec79ecbfd785f",
+            "id": "interface-HsIcon-142f8ee92ee735d027467062c5861d42b91a99c6df57fd28bc53feefda825c4d1a4a85332ff260235b72c413e40242bec96719faa82380a535794b1e6fe56625",
             "file": "projects/hs-ui-kit/src/lib/icon/icons.ts",
             "deprecated": false,
             "deprecationMessage": "",
@@ -30,14 +30,14 @@
                 }
             ],
             "indexSignatures": [],
-            "kind": 163,
+            "kind": 165,
             "methods": []
         }
     ],
     "injectables": [
         {
             "name": "IconsRegistryService",
-            "id": "injectable-IconsRegistryService-d630161bdfde69d85ddf065f74176449",
+            "id": "injectable-IconsRegistryService-11a1670f1aa4add7ca05dab31f520a880cb6a2971004b7a1bd76f385421127976bf681bc9a04ff1adf9e87b316784c644926bf6e386d9504ebe7424a3e819233",
             "file": "projects/hs-ui-kit/src/lib/icon/icons-registry.service.ts",
             "properties": [
                 {
@@ -50,7 +50,7 @@
                     "description": "",
                     "line": 8,
                     "modifierKind": [
-                        120
+                        121
                     ]
                 }
             ],
@@ -72,7 +72,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
-                        122
+                        123
                     ],
                     "jsdoctags": [
                         {
@@ -103,7 +103,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
-                        122
+                        123
                     ],
                     "jsdoctags": [
                         {
@@ -133,7 +133,7 @@
     "components": [
         {
             "name": "AlertMessageComponent",
-            "id": "component-AlertMessageComponent-55265ede93c530949a968f092b32a3dd",
+            "id": "component-AlertMessageComponent-1be59ef8e64ce49b8244c7b0b47ea447d5292dd5c07cb3923d175283181ba01876cf3c9f8060b57789e2c511ccb429e1e9f0faaadf6641aa30c6bed6c2630de4",
             "file": "projects/hs-ui-kit/src/lib/alert-message/alert-message.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [
@@ -174,7 +174,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-383fa91a7e22bd9203974528195de23c",
+            "id": "component-ButtonComponent-3b437f8e8d353e21657bcb80801bf1ae1c3e2df0525042027e659cfdfd991e91db56ed177474f128f40578b58fc568520fe4a6adede58c5d1b1f1af30ba01ca4",
             "file": "projects/hs-ui-kit/src/lib/button/button.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -197,7 +197,8 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 18,
-                    "type": "\"base\" | \"primary\" | \"accent\" | \"warning\" | \"cyan\" | undefined"
+                    "type": "\"base\" | \"primary\" | \"accent\" | \"warning\" | \"cyan\" | undefined",
+                    "decorators": []
                 },
                 {
                     "name": "disabled",
@@ -205,14 +206,16 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 26,
-                    "type": "boolean"
+                    "type": "boolean",
+                    "decorators": []
                 },
                 {
                     "name": "kind",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 17,
-                    "type": "\"base\" | \"flat\" | \"stroked\" | undefined"
+                    "type": "\"base\" | \"flat\" | \"stroked\" | undefined",
+                    "decorators": []
                 },
                 {
                     "name": "label",
@@ -220,7 +223,8 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 25,
-                    "type": "string"
+                    "type": "string",
+                    "decorators": []
                 }
             ],
             "outputsClass": [],
@@ -256,7 +260,7 @@
         },
         {
             "name": "IconComponent",
-            "id": "component-IconComponent-1651bb0c86d407325674b38ed96f3eaa",
+            "id": "component-IconComponent-d4912da35c866b10d1c0bb296f43d5e439b9e1b95805dabee901ce2ef46c36590f5a130bd5dd4aae8ba63c6ab0cedc93e40e0ef2eb29a19a9b9e576f040c5794",
             "file": "stories/icon.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -277,7 +281,8 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 59,
-                    "type": "string"
+                    "type": "string",
+                    "decorators": []
                 }
             ],
             "outputsClass": [],
@@ -291,7 +296,7 @@
                     "description": "",
                     "line": 70,
                     "modifierKind": [
-                        122
+                        123
                     ]
                 },
                 {
@@ -303,7 +308,7 @@
                     "description": "",
                     "line": 56,
                     "modifierKind": [
-                        120
+                        121
                     ]
                 }
             ],
@@ -325,7 +330,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
-                        120
+                        121
                     ],
                     "jsdoctags": [
                         {
@@ -442,7 +447,7 @@
         },
         {
             "name": "IconComponent",
-            "id": "component-IconComponent-235da2c89914d73f6f2e57b06b6acff6-1",
+            "id": "component-IconComponent-5e71cc8e8b52a389d5cf9402492615197a88b660c47fcaebaf77c0ce4a00ecf5b07c8da3791b032c8f8b5f4c0cc3c08592b5dd7ac05de1bd72163c470685af0b-1",
             "file": "projects/hs-ui-kit/src/lib/icon/icon.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -464,7 +469,8 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 22,
-                    "type": "string"
+                    "type": "string",
+                    "decorators": []
                 }
             ],
             "outputsClass": [],
@@ -478,7 +484,7 @@
                     "description": "",
                     "line": 19,
                     "modifierKind": [
-                        120
+                        121
                     ]
                 }
             ],
@@ -500,7 +506,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
-                        120
+                        121
                     ],
                     "jsdoctags": [
                         {
@@ -620,7 +626,7 @@
         },
         {
             "name": "IconsComponent",
-            "id": "component-IconsComponent-922456b1e97f8d7e2d1b4e0732405044",
+            "id": "component-IconsComponent-44fc6a9d6f2787ea9a516f426adf508ed028957916d66b0427ba5ffae114b7689501b59ac683b8ddee11569343d3f6186ac4c45b748d25262310644589c5d993",
             "file": "stories/icons.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -641,7 +647,8 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 15,
-                    "type": "string[] | undefined"
+                    "type": "string[] | undefined",
+                    "decorators": []
                 }
             ],
             "outputsClass": [],
@@ -674,7 +681,7 @@
         },
         {
             "name": "InputComponent",
-            "id": "component-InputComponent-5f6ec9d33152841c92a1a51563239d82",
+            "id": "component-InputComponent-61cb2ae797e0f73ae564639f7f23265192191099b229b82573c17de7cd2acc9747bc0e58e00efeefc2ccea3b0f2cdbb551357800678774adc813b8c40ce98c68",
             "file": "projects/hs-ui-kit/src/lib/form/input/input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -702,49 +709,56 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 41,
-                    "type": "string | boolean"
+                    "type": "string | boolean",
+                    "decorators": []
                 },
                 {
                     "name": "errors",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 40,
-                    "type": "literal type | null | undefined"
+                    "type": "literal type | null | undefined",
+                    "decorators": []
                 },
                 {
                     "name": "icon",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 39,
-                    "type": "string | undefined"
+                    "type": "string | undefined",
+                    "decorators": []
                 },
                 {
                     "name": "label",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 38,
-                    "type": "string | undefined"
+                    "type": "string | undefined",
+                    "decorators": []
                 },
                 {
                     "name": "name",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 37,
-                    "type": "string | undefined"
+                    "type": "string | undefined",
+                    "decorators": []
                 },
                 {
                     "name": "placeholder",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 42,
-                    "type": "string | undefined"
+                    "type": "string | undefined",
+                    "decorators": []
                 },
                 {
                     "name": "type",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 36,
-                    "type": "string | undefined"
+                    "type": "string | undefined",
+                    "decorators": []
                 }
             ],
             "outputsClass": [],
@@ -758,7 +772,7 @@
                     "description": "",
                     "line": 44,
                     "modifierKind": [
-                        121
+                        122
                     ]
                 },
                 {
@@ -771,7 +785,7 @@
                     "description": "",
                     "line": 45,
                     "modifierKind": [
-                        121
+                        122
                     ]
                 },
                 {
@@ -784,7 +798,7 @@
                     "description": "",
                     "line": 46,
                     "modifierKind": [
-                        121
+                        122
                     ]
                 }
             ],
@@ -806,7 +820,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
-                        122
+                        123
                     ],
                     "jsdoctags": [
                         {
@@ -845,7 +859,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
-                        122
+                        123
                     ],
                     "jsdoctags": [
                         {
@@ -885,7 +899,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
-                        122
+                        123
                     ],
                     "jsdoctags": [
                         {
@@ -917,7 +931,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
-                        122
+                        123
                     ],
                     "jsdoctags": [
                         {
@@ -1004,7 +1018,7 @@
     "modules": [
         {
             "name": "HsUiKitModule",
-            "id": "module-HsUiKitModule-c70a285e24299d04d3ae472a77f408ad",
+            "id": "module-HsUiKitModule-88667dbd7318909dea8f1196e85572d222c2715bd67df040b1d148f8849e38b637d1da5b982e059ca41a04e93064d534db14e8c61e1f081f1e2ef9ef9758c619",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -1771,21 +1785,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Icons.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<IconsComponent>",
-                "defaultValue": "(args: IconsComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ButtonComponent>",
                 "defaultValue": "(args: ButtonComponent) => ({\n  props: { ...args },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Icons.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<IconsComponent>",
+                "defaultValue": "(args: IconsComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1859,7 +1873,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 186
             },
             {
                 "name": "HsIconNameSubset",
@@ -1870,7 +1884,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 190
+                "kind": 193
             }
         ],
         "enumerations": [],
@@ -2684,7 +2698,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 186
                 },
                 {
                     "name": "HsIconNameSubset",
@@ -2695,7 +2709,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 190
+                    "kind": 193
                 }
             ]
         }
