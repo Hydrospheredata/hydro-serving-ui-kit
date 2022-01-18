@@ -9,8 +9,11 @@ env:
   HYDRO_SERVING_REPO: Hydrospheredata/hydro-serving-ui-kit
   IMAGE: hydro-serving-ui-kit # name of the built image
 
-jobs:
+defaults:
+  run:
+    shell: bash
 
+jobs:
   Setup:
   # Try to load dependecies from cache, install dependecies on cache miss
     runs-on: ubuntu-latest
