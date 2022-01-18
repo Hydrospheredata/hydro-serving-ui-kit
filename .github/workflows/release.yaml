@@ -4,23 +4,34 @@ on:
     branches:
       - master
       - main
-      
+
   workflow_dispatch:
     inputs:
       bump:
-        description: bump rule (major|feature|bug|rc)
-        default: bug
+        description: 'Bump rule'
         required: false
+        default: bug
+        type: choice
+        options:
+        - major
+        - minor
+        - bug
+        - prerelease
 
       version:
         description: release version, ommit for patch
-        default: ''
         required: false
+        default: ''
 
       release:
-        description: release type (local|global)
+        description: release type
+        required: false
         default: local
-        required: false 
+        type: choice
+        options:
+        - local
+        - global
+
 
 # Secrets:
 #   DOCKERHUB_USERNAME - also used as the dockerhub repository url
@@ -32,6 +43,10 @@ env:
   IMAGE: hydro-serving-ui-kit # name of the built image
   REGISTRY: hydrosphere
   VERSION: ${{ github.event.inputs.version }}
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   Verify_version:
@@ -56,14 +71,14 @@ jobs:
     needs: Verify_version
     if: >
       needs.Verify_version.outputs.latest_version != '$VERSION' && (
-      github.event_name == 'workflow_dispatch' || 
+      github.event_name == 'workflow_dispatch' ||
       github.event_name == 'push')
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
 
-    # Bump service version  
+    # Bump service version
     - name: Get latest tag
       id: get-latest-tag
       uses: actions-ecosystem/action-get-latest-tag@v1
@@ -79,7 +94,7 @@ jobs:
     - name: Set VERSION variable
       if: env.VERSION == ''
       run: echo VERSION=${{ steps.bump-semver.outputs.new_version }} >> $GITHUB_ENV
-      
+
     - name: Set VERSION variable
       if: env.VERSION != ''
       run: echo VERSION=${{ env.VERSION }} >> $GITHUB_ENV
@@ -88,18 +103,18 @@ jobs:
       run: cd projects/hs-ui-kit && npm version ${{ env.VERSION }} --no-git-tag-version
 
     - name: Install build
-      run: | 
+      run: |
         npm ci
         npm run build:hs-ui-kit
 
     - name: Create npmrc
-      run: | 
+      run: |
         echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> dist/hs-ui-kit/.npmrc
       env:
         NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
     - name: Publish npm package
-      run: | 
+      run: |
         cd dist/hs-ui-kit
         npm publish --access public
 
@@ -111,7 +126,7 @@ jobs:
         sudo chown -R "${USER:-$(id -un)}" .
         git commit -m "Releasing ${{ env.IMAGE }}:${{ env.VERSION }}" -a --allow-empty
         git push
-        
+
     - name: Reports
       id: generate-output
       run: echo "::set-output name=tag-output::${{ env.VERSION }}"

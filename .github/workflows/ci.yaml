@@ -9,8 +9,11 @@ env:
   HYDRO_SERVING_REPO: Hydrospheredata/hydro-serving-ui-kit
   IMAGE: hydro-serving-ui-kit # name of the built image
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
-        
   Setup:
   # Try to load dependecies from cache, install dependecies on cache miss
     runs-on: ubuntu-latest
@@ -34,5 +37,5 @@ jobs:
         run: cd projects/hs-ui-kit && npm install
 
       - name: Build project
-        run: npm ci && cd projects/hs-ui-kit && ng build hs-ui-kit --prod
+        run: npm ci && npm run build:hs-ui-kit
 
